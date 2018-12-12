@@ -43,13 +43,9 @@ class App extends Component {
         top_score: currentScore
       });
     }
-
     
     this.setState({
-      selected: this.state.selected.concat(name)
-    });
-
-    this.setState({
+      selected: this.state.selected.concat(name),
       current_score: currentScore
     });
 
