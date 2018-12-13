@@ -10,6 +10,7 @@ class App extends Component {
   state = {
     current_score: 0,
     top_score: 0,
+    max_score: characters.length,
     character_array: characters,
     selected: []
   }
