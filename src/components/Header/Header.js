@@ -4,8 +4,17 @@ import './Header.css'
 const Header = props => {
     
     return (
-        <div>   
-            Score: { props.currentScore } | Top Score: { props.topScore }
+        <div className='navbar'>
+            <ul>
+                {/* logo */}
+                <li className='brand'>Brand</li>
+
+                {/* title */}
+                <li>Allo</li>
+
+                {/* scores */}
+                <li>Score: { props.currentScore } | Top Score: { props.topScore }</li>
+            </ul>
         </div>
     )
 }

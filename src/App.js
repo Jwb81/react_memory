@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import GameBoard from './components/GameBoard/GameBoard';
 import Header from './components/Header/Header'
 
