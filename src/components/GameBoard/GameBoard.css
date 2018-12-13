@@ -1,14 +1,16 @@
 .gameboard {
     display: flex;
-    min-height: 80%;
+    min-height: 80vh;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: space-around;
     /* width: 90%; */
     max-width: 1100px;
     margin: 0 auto;
+    margin-top: 50px;
 
     padding-left: 100px;
     padding-right: 100px;
-    /* grid-template-columns: repeat(4, 1fr); */
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+
 }
+

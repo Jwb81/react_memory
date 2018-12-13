@@ -1,8 +1,14 @@
 .navbar {
+    position: fixed;
+    z-index: 5;
     width: 100%;
     padding: 0;
-    background-color: red;
+    background-color: #5133a4;
     font-size: calc(10px + 14 * (100vw - 320px)/ 800);
+
+    color: white;
+
+    box-shadow: 0 10px 20px black;
 }
 
 ul {
@@ -15,6 +21,10 @@ ul {
     display: inline-block;
     width: 33.3%;
     text-align: center;
-    padding: 25px 10px;
+    padding: 25px 0px;
     /* overflow-x: visible; */
+}
+
+.brand {
+    font-weight: bold;
 }

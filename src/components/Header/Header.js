@@ -7,10 +7,10 @@ const Header = props => {
         <div className='navbar'>
             <ul>
                 {/* logo */}
-                <li className='brand'>Brand</li>
+                <li className='brand'>React Memorization</li>
 
                 {/* title */}
-                <li>Allo</li>
+                <li>{ props.message ? props.message : 'Click on any image to begin!' }</li>
 
                 {/* scores */}
                 <li>Score: { props.currentScore } | Top Score: { props.topScore }</li>

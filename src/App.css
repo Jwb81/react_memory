@@ -1,20 +1,33 @@
+#root {
+  height: 100%;
+}
+
 .App {
   text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;;
+
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 10s linear;
   height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+  background-image: url(./assets/images/plexus_abstract_1080.png);
+  background-size: cover;
+
+  padding-top: 125px;
+  padding-bottom: 50px;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
+  font-size: 1.5em;
   color: white;
 }
 
@@ -29,4 +42,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.header-instructions {
+  width: 50%;
+}
+
+
+.win-game {
+  animation: win-game 1s ease;
+}
+
+
+@keyframes win-game {
+  0%    { border: none; }
+  50%   { border: 5px solid green; }
+  100%  { border: none; }
+}
+
+.shake {
+  animation: shake .5s 0.125s;
+}
+
+@keyframes shake {
+  0% { transform: translate(5px, 0px); }
+  10% { transform: translate(-10px, 0px); }
+  25% { transform: translate(10px, 0px); }
+  40% { transform: translate(-10px, 0px); }
+  55% { transform: translate(10px, 0px); }
+  70% { transform: translate(-10px, 0px); }
+  85% { transform: translate(10px, 0px); }
+  100% { transform: translate(-5px, 0px); }
 }

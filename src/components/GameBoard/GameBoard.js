@@ -6,15 +6,14 @@ function GameBoard (props) {
 
     
     return (
-        <div>
+        // <div>
             <div className='gameboard'>
                 {props.characters.map((char, index) => {
                     return <GamePiece character={char} key={ index } handleCardClick={ props.handleCardClick }/>
                 })}
             </div>
 
-            {/* <button onClick={ props.shuffle }>Shuffle Cards</button> */}
-        </div>
+        // </div>
     )
 }
 

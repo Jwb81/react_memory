@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.css';
 import GameBoard from './components/GameBoard/GameBoard';
 import Header from './components/Header/Header'
 
@@ -13,14 +12,19 @@ class App extends Component {
     top_score: 0,
     max_score: characters.length,
     character_array: characters,
-    selected: []
+    selected: [],
   }
 
   handleCardClick = (name) => {
     let currentScore = this.state.current_score;
     const topScore = this.state.top_score;
+    const gameBoard = document.getElementsByClassName('gameboard')[0];
     
-    
+    // get each gamepiece and remove the shake animation class
+    const cards = Array.from(document.getElementsByClassName('gamepiece'));
+    cards.forEach(card => card.classList.remove('shake'));
+
+    gameBoard.classList.remove('win-game');
     
     const alreadyClicked = this.state.selected.filter(val => val === name).length;
 
@@ -32,14 +36,18 @@ class App extends Component {
     if (alreadyClicked) {
       this.setState({
         current_score: 0,
-        selected: []
+        selected: [],
       });
+
+      // add the shake animation to each gamepiece
+      cards.forEach(card => card.classList.add('shake'));
 
       return;
     }
 
     // add one since current score is used if a card that has never been selected is clickec
     currentScore++;
+    
     if (currentScore > topScore) {
       this.setState({
         top_score: currentScore
@@ -51,7 +59,13 @@ class App extends Component {
       current_score: currentScore
     });
 
-    this.shuffle();
+    // check if the player has won
+    // if (currentScore === this.state.max_score) {
+    if (currentScore === 2) {
+      // this.state.game_status = 'win'
+      gameBoard.classList.add('win-game');
+    
+  }
   }
 
   shuffle = () => {
@@ -84,21 +98,12 @@ class App extends Component {
       <div className="App">
         <Header currentScore={ this.state.current_score } topScore={ this.state.top_score }/>
         
+        <header className="App-header">
+          <h1>Click the icons to play!</h1>
+          <p className='header-instructions'>This is a game of memorization.  The goal is to click all cards before clicking on one card twice.</p>
+        </header>
+        
         <GameBoard characters={ this.state.character_array } handleCardClick={ this.handleCardClick }/>
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header> */}
       </div>
     );
   }
