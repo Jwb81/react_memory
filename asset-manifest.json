@@ -1,14 +1,14 @@
 {
-  "main.css": "/react_memory/static/css/main.3ec9d440.chunk.css",
-  "main.js": "/react_memory/static/js/main.61815a4e.chunk.js",
-  "main.js.map": "/react_memory/static/js/main.61815a4e.chunk.js.map",
-  "static/js/1.3ad5f8a6.chunk.js": "/react_memory/static/js/1.3ad5f8a6.chunk.js",
-  "static/js/1.3ad5f8a6.chunk.js.map": "/react_memory/static/js/1.3ad5f8a6.chunk.js.map",
-  "runtime~main.js": "/react_memory/static/js/runtime~main.8e00c468.js",
-  "runtime~main.js.map": "/react_memory/static/js/runtime~main.8e00c468.js.map",
-  "static/media/App.css": "/react_memory/static/media/plexus_abstract_1080.39098b3b.png",
-  "static/css/main.3ec9d440.chunk.css.map": "/react_memory/static/css/main.3ec9d440.chunk.css.map",
-  "index.html": "/react_memory/index.html",
-  "precache-manifest.d2d7b35f33f052608fa6b182d877c8f6.js": "/react_memory/precache-manifest.d2d7b35f33f052608fa6b182d877c8f6.js",
-  "service-worker.js": "/react_memory/service-worker.js"
+  "main.css": "/static/css/main.0ac09841.chunk.css",
+  "main.js": "/static/js/main.e3f9a3ee.chunk.js",
+  "main.js.map": "/static/js/main.e3f9a3ee.chunk.js.map",
+  "static/js/1.3ad5f8a6.chunk.js": "/static/js/1.3ad5f8a6.chunk.js",
+  "static/js/1.3ad5f8a6.chunk.js.map": "/static/js/1.3ad5f8a6.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/media/App.css": "/static/media/plexus_abstract_1080.39098b3b.png",
+  "static/css/main.0ac09841.chunk.css.map": "/static/css/main.0ac09841.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.591d3d2dd4e3d167e8ab0dd8be676485.js": "/precache-manifest.591d3d2dd4e3d167e8ab0dd8be676485.js",
+  "service-worker.js": "/service-worker.js"
 }
