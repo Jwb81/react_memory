@@ -50,16 +50,41 @@
 }
 
 
+.correct-guess {
+  animation: correct-guess 1s ease;
+}
 .win-game {
-  animation: win-game 1s ease;
+  /* animation: win-game 1s ease; */
+  background-color: rgb(61, 138, 61);
+}
+.lose-game {
+  animation: incorrect-guess 1s ease;
+}
+
+@keyframes correct-guess {
+  0%    { background-color: none; }
+  50%   {
+    background-color: rgb(61, 138, 61);
+  }
+  100%  { background-color: none; }
+}
+
+@keyframes incorrect-guess {
+  0%    { background-color: none; }
+  50%   {
+    background-color: rgb(206, 70, 70);
+  }
+  100%  { background-color: none; }
 }
 
 
-@keyframes win-game {
+/* @keyframes win-game {
   0%    { border: none; }
   50%   { border: 5px solid green; }
   100%  { border: none; }
-}
+} */
+
+
 
 .shake {
   animation: shake .5s 0.125s;

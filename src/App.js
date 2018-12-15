@@ -25,7 +25,8 @@ class App extends Component {
     cards.forEach(card => card.classList.remove('shake'));
 
     gameBoard.classList.remove('win-game');
-    
+    gameBoard.classList.remove('lose-game')
+
     const alreadyClicked = this.state.selected.filter(val => val === name).length;
 
     // shuffle the cards
@@ -38,6 +39,8 @@ class App extends Component {
         current_score: 0,
         selected: [],
       });
+
+      gameBoard.classList.add('lose-game')
 
       // add the shake animation to each gamepiece
       cards.forEach(card => card.classList.add('shake'));
@@ -61,11 +64,14 @@ class App extends Component {
 
     // check if the player has won
     // if (currentScore === this.state.max_score) {
-    if (currentScore === 2) {
+    console.log(`${currentScore}   ${this.state.max_score}`)
+    if (currentScore === this.state.max_score) {
       // this.state.game_status = 'win'
       gameBoard.classList.add('win-game');
-    
-  }
+    }
+    else {
+      gameBoard.classList.add('correct-guess');
+    }
   }
 
   shuffle = () => {
