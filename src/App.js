@@ -63,10 +63,7 @@ class App extends Component {
     });
 
     // check if the player has won
-    // if (currentScore === this.state.max_score) {
-    console.log(`${currentScore}   ${this.state.max_score}`)
     if (currentScore === this.state.max_score) {
-      // this.state.game_status = 'win'
       gameBoard.classList.add('win-game');
     }
     else {
